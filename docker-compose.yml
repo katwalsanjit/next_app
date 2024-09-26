@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  db:
+    container_name: db
+    image: postgres:14-alpine
+    environment:
+      POSTGRES_USER: sanjituser
+      POSTGRES_PASSWORD: mypassword
+      POSTGRES_DB: stackit-local
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data  # Ensure it's a list here
+volumes:
+  postgres_data: {}  # Ensure this section is correctly indented and defined as a dictionary

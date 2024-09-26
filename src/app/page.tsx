@@ -1,8 +1,13 @@
+import Link from "next/link";
 
 export default function Home() {
   return (
     <div >
-      Hello from next 
+      Hello next js
+
+      <br />
+      <br />
+      <Link href="/posts">Posts</Link>
     </div>
   );
 }
